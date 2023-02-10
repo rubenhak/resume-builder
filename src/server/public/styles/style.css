@@ -112,6 +112,9 @@ main {
 
 .resume-work-role {
 }
+.resume-work-role:before {
+    content: ', '
+}
 
 .resume-date {
     font-weight: 300;
@@ -192,9 +195,29 @@ hr {
     color: #dee2e6;
 }
 
-
 @media only screen and (max-width: 600px) {
     .resume-skills-group {
         flex-direction: column;
+    }
+    .resume-work-job {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-work-title {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-work-role:before {
+        content: ''
+    }
+
+    .resume-school-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .resume-school-study {
+        text-align: center;
     }
 }

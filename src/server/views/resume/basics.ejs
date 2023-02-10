@@ -1,5 +1,11 @@
 <div class="resume-basics">
     <h1><%= resume.basics.name %></h1>
+    <% if (resume.basics.tagline) { %>
+        <div class="resume-tagline-text">
+            <%= resume.basics.tagline %>
+        </div>
+    <% } %>
+
     <div class="resume-contacts">
         
         <% if (resume.basics.email) { %>
@@ -21,6 +27,12 @@
         <% if (resume.basics.phone) { %>
             <div class="resume-contact-text">
                 <%= resume.basics.phone %>
+            </div>
+        <% } %>
+
+        <% if (resume.basics.location) { %>
+            <div class="resume-tagline-text">
+                <%= resume.basics.location %>
             </div>
         <% } %>
 

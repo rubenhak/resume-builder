@@ -11,7 +11,8 @@ export interface ResumeSpec
 export interface ResumeBasics
 {
   name?: string,
-  label?: string,
+  tagline?: string,
+  location?: string,
   email?: string,
   phone?: string,
   social?: string[],
