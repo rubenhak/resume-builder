@@ -1,11 +1,15 @@
 <div class="resume-work">
 
-    <div class="resume-work-title">
-        <div class="resume-work-company">
-            <%= work.company %>
-        </div>
-        <div class="resume-work-role">
-            <%= work.role %>
+    <div class="resume-work-job">
+        <div class="resume-work-title">
+            <div class="resume-work-company">
+                <%= work.company %>
+            </div>
+            <% if (work.role && work.role.length > 0) { %>
+            <div class="resume-work-role">
+                , <%= work.role %>
+            </div>
+            <% } %>
         </div>
         <div class="resume-date">
             <%= work.dateRangeStr %>

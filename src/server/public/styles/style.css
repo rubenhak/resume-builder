@@ -1,0 +1,18 @@
+
+.resume-work-job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.resume-work-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-work-company {
+    font-weight: 800;
+}
+
+.resume-work-role {
+}

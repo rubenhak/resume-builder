@@ -22,6 +22,8 @@ export class Server
         this._app.set('view engine', 'ejs');
         this._app.set('views', Path.resolve(__dirname, '..', '..', '..', 'src', 'server', 'views'));
 
+        this._app.use(express.static("src/server/public"));
+
         this._app.use(bodyParser.urlencoded({ extended: false }));
         this._app.use(bodyParser.json());
 
