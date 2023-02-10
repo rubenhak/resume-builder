@@ -10,10 +10,22 @@
 </header>
 
 <main>
-  <!-- <%- include('../resume/basics'); %>
+  <%- include('../resume/basics'); %>
+
   <%- include('../resume/objective'); %>
-  <%- include('../resume/specialties'); %>
-  <%- include('../resume/skills'); %> -->
+
+  <div class="resume-skills-group">
+
+    <div class="resume-skills-group-item">
+      <%- include('../resume/specialties'); %>
+    </div>
+    <div class="resume-skills-group-item">
+      <%- include('../resume/skills'); %>
+    </div>
+    
+  </div>
+
+
   <%- include('../resume/experience'); %>
 </main>   
 

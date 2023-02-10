@@ -21,26 +21,26 @@
     </div>
 
     <% if (work.highlights.length > 0) { %>
-        <div class="resume-work-highlights">
+        <ul class="resume-work-highlights">
             <% work.highlights.forEach(function(highlight) { %>
-                <div class="resume-highlight">
+                <li class="resume-highlight">
                     <%= highlight %>
-                </div>
+                </li>
             <% }); %>
-        </div>
+        </ul>
     <% } %>
 
     <% if (work.projects.length > 0) { %>
-        <div class="resume-work-projects">
+        <ul class="resume-work-projects">
             <% work.projects.forEach(function(project) { %>
-                <div class="resume-project">
+                <li class="resume-project">
                     <div class="resume-highlight">
                         <%= project.summary %>
                     </div>
                     <%- include('work-used', { used: project.used }); %>
-                </div>
+                </li>
             <% }); %>
-        </div>
+        </ul>
     <% } %>
 
     <%- include('work-used', { used: work.used }); %>

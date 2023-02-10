@@ -3,9 +3,13 @@
 
     <h2>Experience</h2>
 
+    <div class="resume-jobs">
+
     <% resume.work.forEach(function(work) { %>
         <%- include('work', { work: work }); %>
     <% }); %>
+
+    </div>
 
 </div>
 <% } %>

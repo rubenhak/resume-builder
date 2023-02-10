@@ -3,11 +3,12 @@
 
     <h2>Skills</h2>
 
+    <ul>
     <% resume.skills.forEach(function(skill) { %>
-        <div class="resume-skill">
+        <li>
             <%= skill %>
-        </div>
+        </li>
     <% }); %>
-
+    </ul>
 </div>
 <% } %>

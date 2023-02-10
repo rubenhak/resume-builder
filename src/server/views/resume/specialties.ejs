@@ -3,11 +3,12 @@
 
     <h2>Specialties</h2>
 
-    <% resume.specialties.forEach(function(specialty) { %>
-        <div class="resume-specialty">
-            <%= specialty %>
-        </div>
-    <% }); %>
-
+    <ul>
+        <% resume.specialties.forEach(function(specialty) { %>
+            <li>
+                <%= specialty %>
+            </li>
+        <% }); %>
+    </ul>
 </div>
 <% } %>
