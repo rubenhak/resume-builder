@@ -55,10 +55,16 @@ main {
     gap: 15px;
 }
 
+.resume-work {
+    display: flex;
+    flex-direction: column;
+}
+
 .resume-work-job {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .resume-work-title {
@@ -71,11 +77,16 @@ main {
 }
 
 .resume-work-role {
+    margin-top: -1px;
 }
 
 .resume-date {
     font-weight: 300;
     font-size: 14px;
+}
+
+.resume-work-description {
+
 }
 
 .resume-work-summary {
@@ -93,11 +104,16 @@ main {
 
 .experience-logo {
     width: 100px;
-    height: 100px;
+    /* height: 64px; */
+
+    position: absolute;
+    margin-left: -150px;
+    z-index: -10;
+    opacity: 20%;
 }
 
 hr {
-    width: 100px;
+    width: 200px;
     text-align: center;
     margin: 0 auto;
 	color: #495057;

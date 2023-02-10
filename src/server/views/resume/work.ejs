@@ -1,11 +1,12 @@
 <div class="resume-work">
 
     <% if (work.logo && work.logo.length > 0) { %>
-        <img float="left" class="experience-logo" src="/img?path=<%= work.logo %>" />
+        <img class="experience-logo" src="/img?path=<%= work.logo %>" />
     <% } %>
 
     <div class="resume-work-job">
 
+    
         <div class="resume-work-title">
             <div class="resume-work-company">
                 <%= work.company %>
@@ -20,34 +21,36 @@
             <%= work.dateRangeStr %>
         </div>
     </div>
-    
-    <div class="resume-work-summary">
-        <%= work.summary %>
+
+    <div class="resume-work-description">
+        <div class="resume-work-summary">
+            <%= work.summary %>
+        </div>
+
+        <% if (work.highlights.length > 0) { %>
+            <ul class="resume-work-highlights">
+                <% work.highlights.forEach(function(highlight) { %>
+                    <li class="resume-highlight">
+                        <%= highlight %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+        <% if (work.projects.length > 0) { %>
+            <ul class="resume-work-projects">
+                <% work.projects.forEach(function(project) { %>
+                    <li class="resume-project">
+                        <div class="resume-highlight">
+                            <%= project.summary %>
+                        </div>
+                        <%- include('work-used', { used: project.used }); %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+        <%- include('work-used', { used: work.used }); %>
     </div>
-
-    <% if (work.highlights.length > 0) { %>
-        <ul class="resume-work-highlights">
-            <% work.highlights.forEach(function(highlight) { %>
-                <li class="resume-highlight">
-                    <%= highlight %>
-                </li>
-            <% }); %>
-        </ul>
-    <% } %>
-
-    <% if (work.projects.length > 0) { %>
-        <ul class="resume-work-projects">
-            <% work.projects.forEach(function(project) { %>
-                <li class="resume-project">
-                    <div class="resume-highlight">
-                        <%= project.summary %>
-                    </div>
-                    <%- include('work-used', { used: project.used }); %>
-                </li>
-            <% }); %>
-        </ul>
-    <% } %>
-
-    <%- include('work-used', { used: work.used }); %>
-    
+        
 </div>
