@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,400,500,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 body {
@@ -23,6 +23,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    max-width: 900px;
+    margin: auto;
 }
 
 .resume-basics {
@@ -36,17 +39,22 @@ main {
 
 .resume-objective-text {
     text-align: center;
-    max-width: 900px;
 }
 
 .resume-skills-group {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .resume-skills-group-item {
     flex-grow: 1;
     flex-shrink: 1;
+    flex-basis: 0px;
+}
+
+.resume-experience {
+    /* margin: 0 200px 0 200px; */
 }
 
 .resume-jobs {
@@ -77,7 +85,6 @@ main {
 }
 
 .resume-work-role {
-    margin-top: -1px;
 }
 
 .resume-date {
@@ -90,11 +97,20 @@ main {
 }
 
 .resume-work-summary {
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
 }
 
 .resume-highlight {
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
+}
+
+.job-link {
+    font-family: 'Roboto', serif;
+    text-decoration: none;
+}
+.job-link:hover {
+    font-family: 'Roboto', serif;
+    text-decoration: underline;
 }
 
 .resume-work-used {
@@ -109,7 +125,11 @@ main {
     position: absolute;
     margin-left: -150px;
     z-index: -10;
-    opacity: 20%;
+    opacity: 5%;
+}
+
+.resume-bullet-list-container {
+    /* margin: 0 100px; */
 }
 
 hr {
@@ -117,4 +137,11 @@ hr {
     text-align: center;
     margin: 0 auto;
 	color: #495057;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .resume-skills-group {
+        flex-direction: column;
+    }
 }

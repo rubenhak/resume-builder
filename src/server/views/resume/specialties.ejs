@@ -3,12 +3,13 @@
 
     <h2>Specialties</h2>
 
-    <ul>
+    <div class="resume-bullet-list-container" >
         <% resume.specialties.forEach(function(specialty) { %>
-            <li>
+            <div>
+                <i class="fa-solid fa-check"></i>
                 <%= specialty %>
-            </li>
+            </div>
         <% }); %>
-    </ul>
+    </div>
 </div>
 <% } %>

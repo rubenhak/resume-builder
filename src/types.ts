@@ -26,6 +26,7 @@ export interface ResumeWork
   company: string,
   logo?: string,
   role?: string,
+  url?: string,
   startDate: Date,
   endDate?: Date,
   summary: string,

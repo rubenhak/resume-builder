@@ -1,12 +1,15 @@
-import { ResumeWork } from "../types";
+import { ResumeSubProject, ResumeWork } from "../types";
+import { ResumeSubProjectImpl } from "./sub-project";
 
 export class ResumeWorkImpl implements ResumeWork
 {
     private _data: ResumeWork;
+    private _projects: ResumeSubProject[];
 
     constructor(data: ResumeWork)
     {
         this._data = data;
+        this._projects = (data.projects ?? []).map(x => new ResumeSubProjectImpl(x));
     }
 
     get company()
@@ -17,6 +20,21 @@ export class ResumeWorkImpl implements ResumeWork
     get logo()
     {
         return this._data.logo;
+    }
+
+    get url()
+    {
+        return this._data.url;
+    }
+
+    get shouldShowURL()
+    {
+        if (this.url) {
+            if (this.url.startsWith('https://github.com')) {
+                return true;
+            }
+        }
+        return false;
     }
 
     get role()
@@ -39,12 +57,14 @@ export class ResumeWorkImpl implements ResumeWork
 
     get projects()
     {
-        return this._data.projects;
+        return this._projects;
     }
+
     get highlights()
     {
         return this._data.highlights;
     }
+    
     get used()
     {
         return this._data.used;
