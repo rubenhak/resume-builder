@@ -119,6 +119,7 @@ main {
 .resume-date {
     font-weight: 300;
     font-size: 14px;
+    flex-shrink: 0;
 }
 
 .resume-work-description {
@@ -177,6 +178,7 @@ main {
 .resume-school-date {
     font-weight: 300;
     font-size: 14px;
+    flex-shrink: 0;
 }
 .resume-school-study {
 
@@ -207,8 +209,11 @@ hr {
         flex-direction: column;
         align-items: center;
     }
+    .resume-work-company {
+        text-align: center;
+    }
     .resume-work-role:before {
-        content: ''
+        content: initial;
     }
 
     .resume-school-info {
