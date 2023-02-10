@@ -1,5 +1,4 @@
 import { Command } from 'commander';
-import { loadResumeSpec } from '../../loader';
 
 import { executeServer } from './command';
 
@@ -13,10 +12,7 @@ export default function(program: Command)
         .option('--port <port>', 'port')
         .action(async (path, options) => {
 
-            const resumeSpec = await loadResumeSpec(path);
-            console.log(resumeSpec);
-
-            await executeServer(options.port ?? DEFAULT_PORT, resumeSpec);
+            await executeServer(options.port ?? DEFAULT_PORT, path);
 
         });
 }

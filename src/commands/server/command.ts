@@ -1,10 +1,13 @@
 import _ from 'the-lodash';
+import { loadResumeSpec } from '../../loader';
 import { Server } from '../../server';
-import { ResumeSpec } from '../../types';
 
 
-export async function executeServer(port: number, resumeSpec: ResumeSpec)
+export async function executeServer(port: number, resumePath: string)
 {
-    const server = new Server(port, { resume: resumeSpec });
+    const resumeSpec = await loadResumeSpec(resumePath);
+    console.log(resumeSpec);
+
+    const server = new Server(port, { resumePath: resumePath });
     await server.start();
 }
