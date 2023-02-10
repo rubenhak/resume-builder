@@ -1,0 +1,44 @@
+<div class="resume-work">
+
+    <div class="resume-work-title">
+        <div class="resume-work-company">
+            <%= work.company %>
+        </div>
+        <div class="resume-work-role">
+            <%= work.role %>
+        </div>
+        <div class="resume-date">
+            <%= work.dateRangeStr %>
+        </div>
+    </div>
+    
+    <div class="resume-work-summary">
+        <%= work.summary %>
+    </div>
+
+    <% if (work.highlights.length > 0) { %>
+        <div class="resume-work-highlights">
+            <% work.highlights.forEach(function(highlight) { %>
+                <div class="resume-highlight">
+                    <%= highlight %>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <% if (work.projects.length > 0) { %>
+        <div class="resume-work-projects">
+            <% work.projects.forEach(function(project) { %>
+                <div class="resume-project">
+                    <div class="resume-highlight">
+                        <%= project.summary %>
+                    </div>
+                    <%- include('work-used', { used: project.used }); %>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <%- include('work-used', { used: work.used }); %>
+    
+</div>

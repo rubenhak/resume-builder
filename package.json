@@ -36,6 +36,7 @@
     "node-emoji": "^1.11.0",
     "sentence-splitter": "^3.2.2",
     "the-lodash": "^2.0.12",
-    "word-wrap": "^1.2.3"
+    "word-wrap": "^1.2.3",
+    "yaml": "^2.2.1"
   }
 }

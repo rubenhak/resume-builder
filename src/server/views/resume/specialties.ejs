@@ -1,0 +1,13 @@
+<% if (resume.specialties.length > 0) { %>
+<div class="resume-specialties">
+
+    <h2>Specialties</h2>
+
+    <% resume.specialties.forEach(function(specialty) { %>
+        <div class="resume-specialty">
+            <%= specialty %>
+        </div>
+    <% }); %>
+
+</div>
+<% } %>

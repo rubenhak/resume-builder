@@ -1,0 +1,28 @@
+<div class="resume-basics">
+    <h1><%= resume.basics.name %></h1>
+    <div class="resume-contacts">
+        
+        <% if (resume.basics.email) { %>
+            <div class="resume-contact-link">
+                <a href="mailto:<%= resume.basics.email %>">
+                    <%= resume.basics.email %>
+                </a>
+            </div>
+        <% } %>
+
+        <% resume.basics.social.forEach(function(social) { %>
+            <div class="resume-contact-link">
+                <a href="https://<%= social %>">
+                    <%= social %>
+                </a>
+            </div>
+        <% }); %>
+
+        <% if (resume.basics.phone) { %>
+            <div class="resume-contact-text">
+                <%= resume.basics.phone %>
+            </div>
+        <% } %>
+
+    </div>
+</div>
