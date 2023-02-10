@@ -27,6 +27,7 @@ export interface ResumeWork
   logo?: string,
   role?: string,
   url?: string,
+  newsUrl?: string,
   startDate: Date,
   endDate?: Date,
   summary: string,
@@ -51,6 +52,7 @@ export interface ResumeEducation
   url?: string,
   area: string,
   studyType: string,
+  highlights: string[],
   startDate?: Date,
   endDate?: Date,  
 }

@@ -22,11 +22,25 @@ export class ResumeSubProjectImpl implements ResumeSubProject
     get shouldShowURL()
     {
         if (this.url) {
-            if (this.url.startsWith('https://github.com')) {
+            // if (this.url.startsWith('https://github.com')) {
                 return true;
-            }
+            // }
         }
         return false;
+    }
+
+    get urlText()
+    {
+        if (this.url) {
+            if (this.url.startsWith('https://github.com')) {
+                return this.url;
+            }
+            if (this.url.length > 20) {
+                return this.url.substring(0, 20) + '...';
+            }
+            return this.url;
+        }
+        return '';
     }
 
     get used()

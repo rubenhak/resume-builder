@@ -7,7 +7,13 @@
     <div class="resume-work-job">
         <div class="resume-work-title">
             <div class="resume-work-company">
+                <% if (work.hasCompanyUrl) { %>
+                    <a href="<%= work.url %>" target="_blank" class="company-link">
+                <% } %>
                 <%= work.company %>
+                <% if (work.hasCompanyUrl) { %>
+                    </a>
+                <% } %>
             </div>
             <% if (work.role && work.role.length > 0) { %>
             <div class="resume-work-role">
@@ -23,11 +29,10 @@
     <div class="resume-work-description">
         <div class="resume-work-summary">
             <%= work.summary %>
+            <% if (work.shouldShowNewsURL) { %>
+                <a href="<%= work.newsUrl %>" target="_blank" class="visible-link"><%= work.newsUrlText %></a>
+            <% } %>
         </div>
-
-        <% if (work.shouldShowURL) { %>
-            <a href="<%= work.url %>" target="_blank" class="job-link"><%= work.url %></a>
-        <% } %>
 
         <% if (work.highlights.length > 0) { %>
             <ul class="resume-work-highlights">
@@ -45,10 +50,10 @@
                     <li class="resume-project">
                         <div class="resume-highlight">
                             <%= project.summary %>
+                            <% if (project.shouldShowURL) { %>
+                                <a href="<%= project.url %>" target="_blank" class="visible-link"><%= project.urlText %></a>
+                            <% } %>
                         </div>
-                        <% if (project.shouldShowURL) { %>
-                            <a href="<%= project.url %>" target="_blank" class="job-link"><%= project.url %></a>
-                        <% } %>
                         <%- include('work-used', { used: project.used }); %>
                     </li>
                 <% }); %>

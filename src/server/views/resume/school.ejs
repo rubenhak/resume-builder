@@ -1,0 +1,36 @@
+<div class="resume-school">
+
+    <!-- <% if (school.logo && school.logo.length > 0) { %>
+        <img class="experience-logo" src="/img?path=<%= school.logo %>" />
+    <% } %> -->
+
+    <div class="resume-school-info">
+        <div class="resume-school-title">
+            <% if (school.hasUrl) { %>
+                <a href="<%= school.url %>" target="_blank" class="company-link">
+            <% } %>
+            <%= school.institution %>
+            <% if (school.hasUrl) { %>
+                </a>
+            <% } %>
+        </div>
+        <div class="resume-school-date">
+            <%= school.dateRangeStr %>
+        </div>
+    </div>
+
+    <div class="resume-school-study">
+        <%= school.infoText %>
+    </div>
+
+    <% if (school.highlights.length > 0) { %>
+        <ul class="resume-work-highlights">
+            <% school.highlights.forEach(function(highlight) { %>
+                <li class="resume-highlight">
+                    <%= highlight %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+        
+</div>

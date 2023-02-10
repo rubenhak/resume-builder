@@ -1,4 +1,5 @@
 import { readFileYAML } from "./file-system";
+import { ResumeEducationImpl } from "./models/education";
 import { ResumeWorkImpl } from "./models/work";
 import { ResumeEducation, ResumeSpec, ResumeWork } from "./types";
 
@@ -37,11 +38,7 @@ function massageResumeSpec(spec: ResumeSpec)
   }
 
   spec.work = spec.work.map(x => massageResumeWork(x));
-
-  for(const edu of spec.education)
-  {
-    massageResumeEducation(edu);
-  }
+  spec.education = spec.education.map(x => new ResumeEducationImpl(x));
 }
 
 function massageResumeWork(work: ResumeWork) : ResumeWork

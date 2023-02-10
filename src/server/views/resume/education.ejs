@@ -1,0 +1,21 @@
+<% if (resume.education.length > 0) { %>
+<div class="resume-education">
+
+    <h2>Education</h2>
+
+    <div class="resume-edu-list">
+
+    <% resume.education.forEach(function(school, index) { %>
+
+        <%- include('school', { school: school }); %>
+
+        <% if (index != resume.education.length - 1) { %>
+            <hr />
+        <% } %>
+        
+    <% }); %>
+
+    </div>
+
+</div>
+<% } %>

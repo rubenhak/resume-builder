@@ -27,14 +27,38 @@ export class ResumeWorkImpl implements ResumeWork
         return this._data.url;
     }
 
-    get shouldShowURL()
+    get hasCompanyUrl()
     {
         if (this.url) {
-            if (this.url.startsWith('https://github.com')) {
-                return true;
-            }
+            return true;
         }
         return false;
+    }
+
+    get newsUrl() {
+        return this._data.newsUrl;
+    }
+
+    get shouldShowNewsURL()
+    {
+        if (this.newsUrl) {
+            return true;
+        }
+        return false;
+    }
+
+    get newsUrlText()
+    {
+        if (this.newsUrl) {
+            if (this.newsUrl.startsWith('https://github.com')) {
+                return this.newsUrl;
+            }
+            if (this.newsUrl.length > 20) {
+                return this.newsUrl.substring(0, 20) + '...';
+            }
+            return this.newsUrl;
+        }
+        return '';
     }
 
     get role()
