@@ -16,13 +16,16 @@ export async function executeGenerate(resumePath: string)
         resume: resumeSpec,
         isStaticOutput: true 
     }
-    const templatePath = './build/views/pages/index.ejs';
+
+    const MY_BUILD_DIR = Path.join(__dirname, '..', '..', '..');
+
+    const templatePath = Path.join(MY_BUILD_DIR, 'views/pages/index.ejs');
     const html = await ejs.renderFile(templatePath, renderData)
-    // console.log(html);
 
     const outputFile = Path.join(resumeDir, 'index.html');
     writeFileContents(html, outputFile);
 
     console.log('Copying public assets...')
-    shelljs.cp('-rf', './build/public/*', resumeDir);
+    shelljs.cp('-rf', Path.join(MY_BUILD_DIR, 'public/*'), resumeDir);
+    console.log('Done.');
 }
