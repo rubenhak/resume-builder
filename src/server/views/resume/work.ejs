@@ -1,7 +1,11 @@
 <div class="resume-work">
 
     <% if (work.logo && work.logo.length > 0) { %>
-        <img class="experience-logo" src="/img?path=<%= work.logo %>" />
+        <% if (isStaticOutput) { %>
+            <img class="experience-logo" src="<%= work.logo %>" />
+        <% } else { %>
+            <img class="experience-logo" src="/img?path=<%= work.logo %>" />    
+        <% } %>
     <% } %>
 
     <div class="resume-work-job">

@@ -12,7 +12,8 @@ export default function(router: express.Router, state: ServerState)
         const resumeSpec = await loadResumeSpec(state.resumePath);
 
         const renderData = {
-            resume: resumeSpec
+            resume: resumeSpec,
+            isStaticOutput: false
         }
         res.render(EJS_TEMPLATE, renderData);
     });

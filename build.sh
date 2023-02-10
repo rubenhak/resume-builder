@@ -4,4 +4,6 @@ MY_DIR="$(dirname $MY_PATH)"
 
 cd ${MY_DIR}
 
-npm run compile
+rm -rf ./build
+
+npm run build
