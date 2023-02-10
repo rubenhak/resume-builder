@@ -1,6 +1,6 @@
 <div class="resume-basics">
     <h1><%= resume.basics.name %></h1>
-    <% if (resume.basics.tagline) { %>
+    <% if (resume.basics.tagline && resume.basics.tagline.length > 0) { %>
         <div class="resume-tagline-text">
             <%= resume.basics.tagline %>
         </div>
@@ -8,7 +8,7 @@
 
     <div class="resume-contacts">
         
-        <% if (resume.basics.email) { %>
+        <% if (resume.basics.email && resume.basics.email.length > 0) { %>
             <div class="resume-contact-link">
                 <a href="mailto:<%= resume.basics.email %>" class="visible-link" target="_blank">
                     <%= resume.basics.email %>
@@ -24,14 +24,14 @@
             </div>
         <% }); %>
 
-        <% if (resume.basics.phone) { %>
+        <% if (resume.basics.phone && resume.basics.phone.length > 0) { %>
             <div class="resume-contact-text">
                 <%= resume.basics.phone %>
             </div>
         <% } %>
 
-        <% if (resume.basics.location) { %>
-            <div class="resume-tagline-text">
+        <% if (resume.basics.location && resume.basics.location.length > 0) { %>
+            <div class="resume-contact-text">
                 <%= resume.basics.location %>
             </div>
         <% } %>

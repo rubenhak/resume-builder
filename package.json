@@ -1,6 +1,6 @@
 {
   "name": "yaml-resume-builder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "YAML Resume Builder",
   "main": "build/src/index.js",
   "types": "build",
