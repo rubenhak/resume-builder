@@ -1,6 +1,11 @@
 <div class="resume-work">
 
+    <% if (work.logo && work.logo.length > 0) { %>
+        <img float="left" class="experience-logo" src="/img?path=<%= work.logo %>" />
+    <% } %>
+
     <div class="resume-work-job">
+
         <div class="resume-work-title">
             <div class="resume-work-company">
                 <%= work.company %>

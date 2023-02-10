@@ -5,8 +5,14 @@
 
     <div class="resume-jobs">
 
-    <% resume.work.forEach(function(work) { %>
+    <% resume.work.forEach(function(work, index) { %>
+
         <%- include('work', { work: work }); %>
+
+        <% if (index != resume.work.length - 1) { %>
+            <hr />
+        <% } %>
+        
     <% }); %>
 
     </div>

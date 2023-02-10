@@ -90,3 +90,15 @@ main {
     font-family: 'Alegreya';
     /* font-style: italic; */
 }
+
+.experience-logo {
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+	color: #495057;
+}
