@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 
-import { executeGenerate } from './command';
+import { executeGenerateHtml } from './command';
 
 export default function(program: Command)
 {
@@ -9,7 +9,10 @@ export default function(program: Command)
         .argument('<path>', 'Resume Spec YAML')
         .action(async (path, options) => {
 
-            await executeGenerate(path);
+            await executeGenerateHtml(path, {
+                htlmFileName: "index.html",
+                printable: false
+            });
 
         });
 }

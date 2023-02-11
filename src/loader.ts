@@ -1,4 +1,5 @@
 import { readFileYAML } from "./file-system";
+import { ResumeBasicsImpl } from "./models/basics";
 import { ResumeEducationImpl } from "./models/education";
 import { ResumeWorkImpl } from "./models/work";
 import { ResumeEducation, ResumeSpec, ResumeWork } from "./types";
@@ -24,6 +25,9 @@ function massageResumeSpec(spec: ResumeSpec)
   if (!spec.basics.name) {
     spec.basics.name = 'Chuck Norris'
   }
+
+  spec.basics = new ResumeBasicsImpl(spec.basics);
+
   if (!spec.specialties) {
     spec.specialties = [];
   }

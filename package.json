@@ -1,6 +1,6 @@
 {
   "name": "yaml-resume-builder",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "YAML Resume Builder",
   "main": "build/src/index.js",
   "types": "build",
@@ -43,6 +43,7 @@
     "express": "^4.18.2",
     "fast-glob": "^3.2.12",
     "node-emoji": "^1.11.0",
+    "puppeteer": "^19.6.3",
     "sentence-splitter": "^3.2.2",
     "shelljs": "^0.8.5",
     "the-lodash": "^2.0.12",

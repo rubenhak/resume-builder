@@ -4,8 +4,11 @@ import * as ejs from 'ejs';
 import * as shelljs from 'shelljs';
 import { loadResumeSpec } from '../../loader';
 import { writeFileContents } from '../../file-system';
+import { PathResolver } from '../../path-resolver';
 
-export async function executeGenerate(resumePath: string)
+const pathResolver = new PathResolver();
+
+export async function executeGenerateHtml(resumePath: string, options: GenerateHtmlOptions)
 {
     const resumeSpec = await loadResumeSpec(resumePath);
     console.log(resumeSpec);
@@ -14,18 +17,36 @@ export async function executeGenerate(resumePath: string)
 
     const renderData = {
         resume: resumeSpec,
-        isStaticOutput: true 
+        isStaticOutput: true,
+        printable: options.printable,
     }
 
-    const MY_BUILD_DIR = Path.join(__dirname, '..', '..', '..');
-
-    const templatePath = Path.join(MY_BUILD_DIR, 'views/pages/index.ejs');
+    const templatePath = Path.join(pathResolver.rootBuildDir, 'views/pages/index.ejs');
     const html = await ejs.renderFile(templatePath, renderData)
 
-    const outputFile = Path.join(resumeDir, 'index.html');
+    const outputFile = Path.join(resumeDir, options.htlmFileName);
     writeFileContents(html, outputFile);
 
     console.log('Copying public assets...')
-    shelljs.cp('-rf', Path.join(MY_BUILD_DIR, 'public/*'), resumeDir);
+    shelljs.cp('-rf', Path.join(pathResolver.rootBuildDir, 'public/*'), resumeDir);
+
     console.log('Done.');
+
+    const result : GenerateHtmlResult = {
+        resumeDir: resumeDir,
+        outputHtmlPath: outputFile,
+    };
+    return result;
+}
+
+export interface GenerateHtmlOptions
+{
+    htlmFileName: string,
+    printable: boolean,
+}
+
+export interface GenerateHtmlResult
+{
+    resumeDir: string,
+    outputHtmlPath: string,
 }

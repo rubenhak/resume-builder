@@ -13,7 +13,8 @@ export default function(router: express.Router, state: ServerState)
 
         const renderData = {
             resume: resumeSpec,
-            isStaticOutput: false
+            isStaticOutput: false,
+            printable: false
         }
         res.render(EJS_TEMPLATE, renderData);
     });

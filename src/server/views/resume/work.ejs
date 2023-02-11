@@ -1,10 +1,12 @@
 <div class="resume-work">
 
-    <% if (work.logo && work.logo.length > 0) { %>
-        <% if (isStaticOutput) { %>
-            <img class="experience-logo" src="<%= work.logo %>" />
-        <% } else { %>
-            <img class="experience-logo" src="/img?path=<%= work.logo %>" />    
+    <% if (!printable) { %>
+        <% if (work.logo && work.logo.length > 0) { %>
+            <% if (isStaticOutput) { %>
+                <img class="experience-logo" src="<%= work.logo %>" />
+            <% } else { %>
+                <img class="experience-logo" src="/img?path=<%= work.logo %>" />    
+            <% } %>
         <% } %>
     <% } %>
 

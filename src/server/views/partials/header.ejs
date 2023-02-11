@@ -1,11 +1,53 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">EJS Is Fun</a>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
-      </li>
-    </ul>
-</nav> -->
+<% if (!printable) { %>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#"></a>
+      
+      <div class="d-flex align-items-flex-end gap-1">
+        
+        <% if (resume.basics.hasEmail) { %>
+          <a class="btn btn-light px-3"
+             role="button"
+             target="_blank"
+             href="mailto:<%= resume.basics.email %>"
+             >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        <% } %>
+        
+        <% if (resume.basics.hasLinkedIn) { %>
+          <a class="btn btn-light px-3"
+             role="button"
+             target="_blank"
+             href="https://<%= resume.basics.linkedIn %>"
+             >
+             <i class="fa-brands fa-linkedin"></i>
+          </a>
+        <% } %>
+        
+        <% if (resume.basics.hasGitHub) { %>
+          <a class="btn btn-light px-3"
+             role="button"
+             target="_blank"
+             href="https://<%= resume.basics.gitHub %>"
+             >
+             <i class="fa-brands fa-github"></i>
+          </a>
+        <% } %>
+        
+        <a class="btn btn-light px-3"
+           role="button"
+           target="_blank"
+           href="resume.pdf"
+           >
+           <i class="fa-solid fa-file-pdf"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+<% } %>
+  
+  
