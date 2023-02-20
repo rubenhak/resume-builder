@@ -3,11 +3,20 @@
 
     <h2>Skills</h2>
 
-    <div class="resume-bullet-list-container">
-    <% resume.skills.forEach(function(skill) { %>
-        <div>
-            <i class="fa-solid fa-check"></i>
-            <%= skill %>
+    <div class="resume-skill-area-list">
+    <% resume.skills.forEach(function(skillArea) { %>
+        <div class="resume-skill-area">
+            <div class="resume-skill-area-name">
+                <%= skillArea.area %>
+            </div>
+
+            <div class="resume-skills-container">
+            <% skillArea.values.forEach(function(skill) { %>
+                <div class="resume-skill-area-skill">
+                    <%= skill %>
+                </div>
+            <% }); %>
+            </div>
         </div>
     <% }); %>
     </div>

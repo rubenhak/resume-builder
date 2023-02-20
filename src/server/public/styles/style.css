@@ -60,21 +60,7 @@ main {
     text-align: center;
 }
 
-.resume-skills-group {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
 
-.resume-skills-group-item {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0px;
-}
-
-.resume-experience {
-    /* margin: 0 200px 0 200px; */
-}
 
 .resume-jobs {
     display: flex;
@@ -150,7 +136,47 @@ main {
     opacity: 5%;
 }
 
-.resume-bullet-list-container {
+.resume-specialties-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.resume-skill-area-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-skill-area-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-skill-area {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.resume-skill-area-name {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+    width: 150px;
+    align-self: center;
+}
+.resume-skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.resume-skill-area-skill {
+
+}
+.resume-skill-area-skill:not(:first-child)::before {
+    content: ', '
+
 }
 
 .resume-edu-list {
@@ -200,9 +226,7 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
-    .resume-skills-group {
-        flex-direction: column;
-    }
+
     .resume-work-job {
         flex-direction: column;
         align-items: center;
