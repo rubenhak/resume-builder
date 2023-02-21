@@ -258,6 +258,7 @@ hr {
     }
     .resume-skill-area-name {
         width: inherit;
+        text-decoration: underline;
     }
     .resume-skills-container {
         justify-content: center;
