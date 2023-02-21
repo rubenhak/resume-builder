@@ -144,6 +144,13 @@ main {
     gap: 10px;
 }
 
+.resume-specialty {
+
+}
+.resume-specialty i {
+    opacity: 20%;
+}
+
 .resume-skill-area-list {
     display: flex;
     flex-direction: column;
@@ -163,20 +170,28 @@ main {
     font-size: 12px;
     font-weight: 300;
     text-align: right;
-    width: 150px;
     align-self: center;
+
+    width: 150px;
 }
 .resume-skills-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
 }
 .resume-skill-area-skill {
+    display: flex;
+    gap: 5px;
 
+    font-weight: 500;
+}
+.resume-skill-area-skill i {
+    align-self: center;
+    opacity: 20%;
 }
 .resume-skill-area-skill:not(:first-child)::before {
-    content: ', '
-
+    /* content: ', ' */
 }
 
 .resume-edu-list {
@@ -226,6 +241,27 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .resume-specialties-list {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        gap: 0;
+    }
+
+    .resume-skill-area-list {
+        gap: 20px;
+    }
+    .resume-skill-area {
+        flex-direction: column;
+        gap: 0;
+    }
+    .resume-skill-area-name {
+        width: inherit;
+    }
+    .resume-skills-container {
+        justify-content: center;
+    }
 
     .resume-work-job {
         flex-direction: column;
