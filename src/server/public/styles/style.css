@@ -141,7 +141,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 5px;
 }
 
 .resume-specialty {
@@ -167,10 +168,14 @@ main {
     gap: 10px;
 }
 .resume-skill-area-name {
+    flex-shrink: 0;
+
     font-size: 12px;
     font-weight: 300;
     text-align: right;
-    align-self: center;
+    
+    /* align-self: center; */
+    margin-top: 3px;
 
     width: 150px;
 }
@@ -178,7 +183,8 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 0;
 }
 .resume-skill-area-skill {
     display: flex;
@@ -257,6 +263,9 @@ hr {
         gap: 0;
     }
     .resume-skill-area-name {
+        align-self: center;
+        margin-top: 0;
+
         width: inherit;
         text-decoration: underline;
     }
