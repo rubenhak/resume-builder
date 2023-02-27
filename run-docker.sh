@@ -1,11 +1,9 @@
 #!/bin/bash
-set -euo pipefail
-
 MY_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
 MY_DIR="$(dirname $MY_PATH)"
 
 cd ${MY_DIR}
 
-rm -rf ./build
+docker run -it --rm -v  yaml-resume-builder $@
 
-npm run build
+--no-cache 
