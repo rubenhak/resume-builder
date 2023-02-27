@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 log() {
    echo "[RESUME-DOCKER] $1"
@@ -23,20 +23,20 @@ then
     then
         echo "Running in Drone..."
 
-        MY_OTHER_ARGS="${PLUGIN_OTHER_ARGS}"
+        MY_BUILD_ARGS="${PLUGIN_BUILD_ARGS}"
         MY_IS_DEBUG="${PLUGIN_IS_DEBUG}"
 
     elif isTrue "$GITHUB_ACTIONS"
     then
         echo "Running in GitHub Actions..."
 
-        MY_OTHER_ARGS="${INPUT_OTHER_ARGS}"
+        MY_BUILD_ARGS="${INPUT_BUILD_ARGS}"
         MY_IS_DEBUG="${INPUT_IS_DEBUG}"
 
     else  
         echo "Unknown CI Run..."
 
-        MY_OTHER_ARGS=""
+        MY_BUILD_ARGS=""
         MY_IS_DEBUG=""
     fi  
 
@@ -51,10 +51,9 @@ then
         echo "---"    
     fi
 
-
-    if [[ ! -z "${MY_OTHER_ARGS}" ]]
+    if [[ ! -z "${MY_BUILD_ARGS}" ]]
     then
-        MY_CMD="${MY_CMD} ${MY_OTHER_ARGS}"
+        MY_CMD="${MY_CMD} ${MY_BUILD_ARGS}"
     fi
 
     log "RUNNING: ${MY_CMD}"

@@ -1,0 +1,14 @@
+name: YAML Resume Builder
+description: Build Resume
+author: rubenhak
+inputs:
+  build_args:
+    description: Tool Arguments
+    required: true
+    default: ''
+runs:
+  using: docker
+  image: docker://rubenhak/yaml-resume-builder:1.0.14
+branding:
+  icon: 'shield'
+  color: 'green'
