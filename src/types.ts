@@ -1,11 +1,19 @@
 export interface ResumeSpec
 {
+  settings: ResumeSettings,
   basics: ResumeBasics,
   objective?: string,
   specialties: ResumeSpecialties,
   skills: ResumeSkills,
   work: ResumeWork[],
   education: ResumeEducation[],
+}
+
+
+export interface ResumeSettings
+{
+  showEducationDates?: boolean,
+  showSkillsBelow?: boolean
 }
 
 export interface ResumeBasics

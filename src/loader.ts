@@ -19,6 +19,16 @@ export async function loadResumeSpec(path: string)
 
 function massageResumeSpec(spec: ResumeSpec)
 {
+  if (!spec.settings) {
+    spec.settings = { };
+  }
+  if (!spec.settings.showEducationDates) {
+    spec.settings.showEducationDates = false;
+  }
+  if (!spec.settings.showSkillsBelow) {
+    spec.settings.showSkillsBelow = false;
+  }
+
   if (!spec.basics) {
     spec.basics = { };
   }

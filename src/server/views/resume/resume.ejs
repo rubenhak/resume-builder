@@ -4,8 +4,14 @@
 
 <%- include('./specialties'); %>
 
-<%- include('./skills'); %>
+<% if (!resume.settings.showSkillsBelow) { %>
+    <%- include('./skills'); %>
+<% } %>
 
 <%- include('./experience'); %>
+
+<% if (resume.settings.showSkillsBelow) { %>
+    <%- include('./skills'); %>
+<% } %>
 
 <%- include('./education'); %>

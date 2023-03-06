@@ -20,9 +20,11 @@
                 </a>
             <% } %>
         </div>
+        <% if (resume.settings.showEducationDates) { %>
         <div class="resume-school-date">
             <%= school.dateRangeStr %>
         </div>
+        <% } %>
     </div>
 
     <div class="resume-school-study">
