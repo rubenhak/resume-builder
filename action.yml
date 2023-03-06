@@ -8,7 +8,7 @@ inputs:
     default: ''
 runs:
   using: docker
-  image: docker://rubenhak/yaml-resume-builder:1.0.15
+  image: docker://rubenhak/yaml-resume-builder:1.0.16
 branding:
   icon: 'shield'
   color: 'green'
