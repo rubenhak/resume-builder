@@ -3,7 +3,11 @@
     <% if (!printable) { %>
         <% if (resume.basics.photo && resume.basics.photo.length > 0) { %>
             <div class="resume-photo">
-                <img src="/img?path=<%= resume.basics.photo %>" />
+                <% if (isStaticOutput) { %>
+                    <img src="<%= resume.basics.photo %>" />
+                <% } else { %>
+                    <img src="/img?path=<%= resume.basics.photo %>" /> 
+                <% } %>
             </div>
         <% } %>
     <% } %>
