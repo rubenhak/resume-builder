@@ -27,6 +27,10 @@ export class ResumeBasicsImpl implements ResumeBasics
         return this._data.tagline;
     }
 
+    get photo() {
+        return this._data.photo;
+    }
+
     get location() {
         return this._data.location;
     }

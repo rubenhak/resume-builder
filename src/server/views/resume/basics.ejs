@@ -1,4 +1,13 @@
 <div class="resume-basics">
+
+    <% if (!printable) { %>
+        <% if (resume.basics.photo && resume.basics.photo.length > 0) { %>
+            <div class="resume-photo">
+                <img src="/img?path=<%= resume.basics.photo %>" />
+            </div>
+        <% } %>
+    <% } %>
+
     <h1><%= resume.basics.name %></h1>
     <% if (resume.basics.tagline && resume.basics.tagline.length > 0) { %>
         <div class="resume-tagline-text">

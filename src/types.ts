@@ -24,6 +24,7 @@ export interface ResumeBasics
   email?: string,
   phone?: string,
   social?: string[],
+  photo?: string,
 }
 
 export type ResumeSpecialties = string[];
