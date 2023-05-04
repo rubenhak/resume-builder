@@ -19,6 +19,10 @@ export async function loadResumeSpec(path: string)
 
 function massageResumeSpec(spec: ResumeSpec)
 {
+  if (!spec.web) {
+    spec.web = { };
+  }
+
   if (!spec.settings) {
     spec.settings = { };
   }

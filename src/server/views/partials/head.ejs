@@ -1,5 +1,17 @@
 <meta charset="UTF-8">
+
 <title>Resume / <%= resume.basics.name %></title>
+
+<meta property="og:title" content="Resume / <%= resume.basics.name %>" />
+<meta property="og:site_name" content="Resume / <%= resume.basics.name %>">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<%= resume.web.url %>" />
+<meta property="og:image" content="<%= resume.web.previewImage %>" />
+
+<meta name="twitter:title" content="Resume / <%= resume.basics.name %>">
+<meta name="twitter:description" content="<%= resume.basics.name %>'s Resume">
+<meta name="twitter:image" content="<%= resume.web.previewImage %>">
+<meta name="twitter:card" content="<%= resume.web.previewImage %>">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

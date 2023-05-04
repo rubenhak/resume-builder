@@ -1,5 +1,6 @@
 export interface ResumeSpec
 {
+  web: ResumeWebSettings,
   settings: ResumeSettings,
   basics: ResumeBasics,
   objective?: string,
@@ -9,6 +10,12 @@ export interface ResumeSpec
   education: ResumeEducation[],
 }
 
+
+export interface ResumeWebSettings
+{
+  url?: string,
+  previewImage?: string
+}
 
 export interface ResumeSettings
 {
