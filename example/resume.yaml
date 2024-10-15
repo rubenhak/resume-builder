@@ -32,7 +32,12 @@ basics:
 ### OBJECTIVE
 ###
 objective: >
-  A highly accomplished martial artist, actor, and entrepreneur, Chuck Norris has over five decades of experience in the entertainment industry. Known for his legendary roles in action films and TV series such as Walker, Texas Ranger, Chuck is also a six-time world karate champion, holding black belts in multiple disciplines. His business ventures include founding a successful martial arts school and developing a line of fitness equipment. He is a published author and public speaker, with a strong focus on health, fitness, and philanthropy.
+  A highly accomplished martial artist, actor, and entrepreneur, Chuck Norris has over five
+  decades of experience in the entertainment industry. Known for his legendary roles in action
+  films and TV series such as Walker, Texas Ranger, Chuck is also a six-time world karate champion,
+  holding black belts in multiple disciplines. His business ventures include founding a successful
+  martial arts school and developing a line of fitness equipment. He is a published author and public
+  speaker, with a strong focus on health, fitness, and philanthropy.
 
 ###
 ### SPECIALTIES
@@ -99,7 +104,8 @@ work:
     url: https://cbs.com
     newsUrl: https://en.wikipedia.org/wiki/Texas_Ranger_Division
     summary: >
-      Renowned actor and producer known for starring in and creating iconic action films and TV series, becoming a pop culture legend.
+      Renowned actor and producer known for starring in and creating iconic action films
+      and TV series, becoming a pop culture legend.
     highlights:
       - Starred in over 30 action films, including Way of the Dragon, Delta Force
       - Produced and starred in the hit TV series Walker, Texas Ranger
@@ -114,7 +120,9 @@ work:
     logo: company/total-gym.webp
     role: Entrepreneur
     startDate: 1970
-    summary: Successful entrepreneur with ventures in fitness equipment and martial arts schools, promoting health, fitness, and self-discipline worldwide.
+    summary: >
+      Successful entrepreneur with ventures in fitness equipment and martial arts
+      schools, promoting health, fitness, and self-discipline worldwide.
     projects:
       - summary: >
           Co-developed and marketed Total Gym fitness equipment
@@ -154,4 +162,5 @@ education:
     endDate: 2010-05-01
     highlights:
       - Received an honorary doctorate for his significant contributions to public service and education.
-      - Recognized for founding Kickstart Kids, a program aimed at building character in children through martial arts.
+      - Recognized for founding Kickstart Kids, a program aimed at building character in children
+        through martial arts.
