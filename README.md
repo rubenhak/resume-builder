@@ -39,6 +39,7 @@ example/index.html
 ```
 
 Output here: https://github.com/rubenhak/resume-builder/blob/main/example/index.html
+See here: https://rubenhak.github.io/resume-builder/
 
 ## Generate PDF Output
 ```sh
@@ -50,3 +51,4 @@ example/index.html
 ```
 
 Output here: https://github.com/rubenhak/resume-builder/blob/main/example/resume.pdf
+
