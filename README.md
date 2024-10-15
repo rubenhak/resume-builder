@@ -17,6 +17,10 @@ Get started by creating your resume in YAML and let the generator handle the res
 $ npm install -g yaml-resume-builder
 ```
 
+## Sample Resume YAML Definition
+YAML Definition: https://github.com/rubenhak/resume-builder/blob/main/example/resume.yaml
+
+
 ## Running Live Server
 ```sh
 # Clone the repo which contains Chuck Norris's resume
