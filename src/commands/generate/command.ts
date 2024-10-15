@@ -21,14 +21,15 @@ export async function executeGenerateHtml(resumePath: string, options: GenerateH
         printable: options.printable,
     }
 
-    const templatePath = Path.join(pathResolver.rootBuildDir, 'views/pages/index.ejs');
+    const templatePath = Path.join(pathResolver.rootBuildDir, 'src/server/views/pages/index.ejs');
+
     const html = await ejs.renderFile(templatePath, renderData)
 
     const outputFile = Path.join(resumeDir, options.htlmFileName);
     writeFileContents(html, outputFile);
 
     console.log('Copying public assets...')
-    shelljs.cp('-rf', Path.join(pathResolver.rootBuildDir, 'public/*'), resumeDir);
+    shelljs.cp('-rf', Path.join(pathResolver.rootBuildDir, 'src/server/public/*'), resumeDir);
 
     console.log('Done.');
 

@@ -1,0 +1,157 @@
+###
+### WEB
+###
+web:
+  url: https://resume.chuck-norris.com
+  previewImage: https://resume.chuck-norris.com/preview.png
+
+
+###
+### SETTINGS
+###
+settings:
+  showEducationDates: false
+  showSkillsBelow: true
+
+###
+### BASICS
+###
+basics:
+  name: Chuck Norris
+  tagline: The best of the best of the best
+  location: Planet Earth
+  email: chuck@norris.com
+  phone: (123) 456-7890
+  social:
+    - github.com/chuck-norris
+    - linkedin.com/in/chuck-norris
+    - resume.chuck-norris.com
+  photo: photo.png
+
+###
+### OBJECTIVE
+###
+objective: >
+  A highly accomplished martial artist, actor, and entrepreneur, Chuck Norris has over five decades of experience in the entertainment industry. Known for his legendary roles in action films and TV series such as Walker, Texas Ranger, Chuck is also a six-time world karate champion, holding black belts in multiple disciplines. His business ventures include founding a successful martial arts school and developing a line of fitness equipment. He is a published author and public speaker, with a strong focus on health, fitness, and philanthropy.
+
+###
+### SPECIALTIES
+###
+specialties:
+  - Martial Arts
+  - Action Films
+  - Television Production
+  - Fitness Training
+  - Public Speaking
+  - Entrepreneurship
+  - Writing & Publishing
+  - Philanthropy
+
+###
+### SKILLS
+###
+skills:
+  - area: Martial Arts
+    values:
+      - Karate (6-time World Champion)
+      - Tang Soo Do (Black Belt)
+      - Taekwondo (Black Belt)
+      - Brazilian Jiu-Jitsu (Black Belt)
+      - Judo (Black Belt)
+  - area: Entertainment
+    values:
+      - Acting
+      - Film Production
+      - Television Production
+      - Fight Choreography
+  - area: Fitness and Health
+    values:
+      - Fitness Training
+      - Self-Defense Instruction
+      - Fitness Equipment Development
+  - area: Leadership
+    values:
+      - Business Management
+      - Brand Development
+      - Public Speaking
+  - area: Writing and Publishing
+    values:
+      - Book Writing
+      - Motivational Writing
+      - Columnist
+  - area: Philanthropy
+    values:
+      - Youth Mentorship
+      - Character Development Programs
+      - Veterans Advocacy
+
+
+###
+### WORK
+###
+work:
+
+  - company: CBS for Walker, Texas Ranger
+    logo: company/cbs.png
+    role: Actor & Producer
+    startDate: 1969
+    endDate: 2001
+    url: https://cbs.com
+    newsUrl: https://en.wikipedia.org/wiki/Texas_Ranger_Division
+    summary: >
+      Renowned actor and producer known for starring in and creating iconic action films and TV series, becoming a pop culture legend.
+    highlights:
+      - Starred in over 30 action films, including Way of the Dragon, Delta Force
+      - Produced and starred in the hit TV series Walker, Texas Ranger
+      - Developed iconic action-hero persona
+    used:
+      - Karate
+      - Muscles
+      - Acting
+
+
+  - company: Total Gym Fitness, Chuck Norris System
+    logo: company/total-gym.webp
+    role: Entrepreneur
+    startDate: 1970
+    summary: Successful entrepreneur with ventures in fitness equipment and martial arts schools, promoting health, fitness, and self-discipline worldwide.
+    projects:
+      - summary: >
+          Co-developed and marketed Total Gym fitness equipment
+        url: https://totalgym.com/
+        used:
+          - Welding
+          - Designing
+          - Developing
+      - summary: >
+          Founded martial arts schools with a focus on practical self-defense and discipline
+        url: https://www.ufaf.org/chuck-norris-system.asp
+        used:
+          - C++23
+
+###
+### EDUCATION
+###
+education:
+
+  - institution: Liberty University
+    logo: edu/liberty_university.svg
+    url: https://www.liberty.edu/
+    studyType: M.S.
+    area: Humane Letters
+    startDate: 2008-05-01
+    endDate: 2008-05-01
+    highlights:
+      - Awarded an honorary doctorate recognizing his contributions to philanthropy and public service.
+      - Acknowledged for his efforts in promoting character development through martial arts and youth programs.
+
+  - institution: Texas A&M University
+    logo: edu/texas_a_m_university.svg
+    url: https://www.tamu.edu/
+    studyType: Ph.D.
+    area: Public Service
+    startDate: 2010-05-01
+    endDate: 2010-05-01
+    highlights:
+      - Received an honorary doctorate for his significant contributions to public service and education.
+      - Recognized for founding Kickstart Kids, a program aimed at building character in children through martial arts.

@@ -1,6 +1,6 @@
 {
   "name": "yaml-resume-builder",
-  "version": "1.0.20",
+  "version": "1.0.25",
   "description": "YAML Resume Builder",
   "main": "build/src/index.js",
   "types": "build",
@@ -20,7 +20,7 @@
     "clean": "gts clean",
     "compile": "tsc",
     "build": "npm run compile && npm run copy-files",
-    "copy-files": "cp -rf ./src/server/public ./build/ && cp -rf ./src/server/views ./build/",
+    "copy-files": "cp -rf ./src/server/public ./build/src/server/ && cp -rf ./src/server/views ./build/src/server/",
     "fix": "gts fix",
     "prepare": "npm run build",
     "pretest": "npm run build",

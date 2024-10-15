@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    color: #212529;
+    margin: 0;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 22px;
+    text-align: center;
+    color: #495057;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.narrow-main-page {
+    max-width: 900px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.visible-link {
+    color: #1982c4;
+    text-decoration: none;
+}
+.visible-link:hover {
+    color: #1982c4;
+    text-decoration: underline;
+}
+
+.resume-photo img {
+    width: 128px;
+    height: 128px;
+
+    border-radius: 50%;
+    border: aliceblue solid 5px;
+
+    transition: .5s;
+}
+.resume-photo img:hover {
+    transform: scale(1.05);
+}
+
+.resume-basics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-contacts {
+    text-align: center;
+}
+
+.resume-objective {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-objective-text {
+    text-align: center;
+}
+
+
+
+.resume-jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resume-work {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-work-job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.resume-work-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-work-company {
+    color: #212529;
+    font-weight: 700;
+}
+.resume-work-company a {
+    color: #212529;
+    text-decoration: none;
+}
+.resume-work-company a:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.resume-work-role {
+}
+.resume-work-role:before {
+    content: ', '
+}
+
+.resume-date {
+    font-weight: 300;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.resume-work-description {
+
+}
+
+.resume-work-summary {
+    font-family: 'Roboto', serif;
+}
+
+.resume-highlight {
+    font-family: 'Roboto', serif;
+}
+
+.resume-work-used {
+    font-family: 'Alegreya';
+}
+
+.experience-logo {
+    max-width: 100px;
+    max-height: 100px;
+
+    position: absolute;
+    margin-left: -150px;
+    z-index: -10;
+    opacity: 5%;
+}
+
+.resume-specialties-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.resume-specialty {
+
+}
+.resume-specialty i {
+    opacity: 20%;
+}
+
+.resume-skill-area-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-skill-area-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-skill-area {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.resume-skill-area-name {
+    flex-shrink: 0;
+
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+    
+    /* align-self: center; */
+    margin-top: 3px;
+
+    width: 150px;
+}
+.resume-skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 0;
+}
+.resume-skill-area-skill {
+    display: flex;
+    gap: 5px;
+
+    font-weight: 500;
+}
+.resume-skill-area-skill i {
+    align-self: center;
+    opacity: 20%;
+}
+.resume-skill-area-skill:not(:first-child)::before {
+    /* content: ', ' */
+}
+
+.resume-edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.resume-school-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.resume-school-title {
+    color: #212529;
+    font-weight: 700;
+}
+.resume-school-title a {
+    color: #212529;
+    text-decoration: none;
+}
+.resume-school-title a:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.resume-school-date {
+    font-weight: 300;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.resume-school-study {
+
+}
+
+hr {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+	color: #495057;
+}
+
+.footer-copyright {
+    margin-top: 50px;
+    font-size: 8px;
+    color: #dee2e6;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .resume-specialties-list {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        gap: 0;
+    }
+
+    .resume-skill-area-list {
+        gap: 20px;
+    }
+    .resume-skill-area {
+        flex-direction: column;
+        gap: 0;
+    }
+    .resume-skill-area-name {
+        align-self: center;
+        margin-top: 0;
+
+        width: inherit;
+        text-decoration: underline;
+    }
+    .resume-skills-container {
+        justify-content: center;
+    }
+
+    .resume-work-job {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-work-title {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-work-company {
+        text-align: center;
+    }
+    .resume-work-role:before {
+        content: initial;
+    }
+
+    .resume-school-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .resume-school-study {
+        text-align: center;
+    }
+}
+
+.printable-container {
+    margin: 0px;
+}
