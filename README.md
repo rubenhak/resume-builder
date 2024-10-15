@@ -2,6 +2,8 @@
 
 **YAML Resume Builder** is an open-source project that allows you to create beautifully formatted resumes from simple YAML files. It supports both **HTML** and **PDF** output, enabling easy customization and sharing. With this tool, you can focus on content while the generator handles the design and formatting.
 
+This is how your resume could look like: https://rubenhak.github.io/resume-builder/
+
 ## Features:
 - Simple YAML input format
 - Generates professional-looking resumes in both HTML and PDF
@@ -36,6 +38,8 @@ $ yaml-resume-builder generate example/resume.yaml
 example/index.html
 ```
 
+Output here: https://github.com/rubenhak/resume-builder/blob/main/example/index.html
+
 ## Generate PDF Output
 ```sh
 # Run the live server 
@@ -44,3 +48,5 @@ $ yaml-resume-builder pdf example/resume.yaml
 # Output stored to 
 example/index.html
 ```
+
+Output here: https://github.com/rubenhak/resume-builder/blob/main/example/resume.pdf
