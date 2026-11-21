@@ -20,6 +20,26 @@ $ npm install -g yaml-resume-builder
 ## Sample Resume YAML Definition
 YAML Definition: https://github.com/rubenhak/resume-builder/blob/main/example/resume.yaml
 
+## Markdown in Text Fields
+Text fields (tagline, objective, specialties, skills, work summaries, highlights, project summaries, and education info) support simple inline markdown:
+
+| Syntax | Result |
+|---|---|
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `***bold italic***` | ***bold italic*** |
+| `~~strike~~` | ~~strike~~ |
+| `` `code` `` | `code` |
+| `[text](https://example.com)` | link (http, https, mailto only) |
+| `\*` | literal asterisk |
+
+Raw HTML is escaped. In YAML, a plain value that **starts** with `*` is parsed as an alias, so quote it or use a block scalar:
+```yaml
+highlights:
+  - "**Led** migration to Kubernetes"
+  - Cut infra costs by *40%*
+```
+
 
 ## Running Live Server
 ```sh

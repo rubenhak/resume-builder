@@ -1,6 +1,6 @@
 ARG PRODUCT_VERSION
 
-FROM node:18-slim
+FROM node:26-slim
 
 # RUN apk update && apk upgrade && \
 #     apk --no-cache add ca-certificates bash openssl git curl wget 

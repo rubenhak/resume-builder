@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { loadResumeSpec } from '../../../../loader';
 import { ServerState } from '../../../types';
+import { renderMarkdown } from '../../../../markdown';
 
 const URL_PATH = '/';
 const EJS_TEMPLATE = 'pages/index';
@@ -14,7 +15,8 @@ export default function(router: express.Router, state: ServerState)
         const renderData = {
             resume: resumeSpec,
             isStaticOutput: false,
-            printable: false
+            printable: false,
+            md: renderMarkdown,
         }
         res.render(EJS_TEMPLATE, renderData);
     });

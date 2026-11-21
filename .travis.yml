@@ -1,7 +1,7 @@
 dist: focal
 language: node_js
 node_js:
-- 18
+- 26
 before_script:
   - npm run build
 before_deploy:
