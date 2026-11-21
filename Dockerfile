@@ -5,8 +5,9 @@ FROM node:26-slim
 # RUN apk update && apk upgrade && \
 #     apk --no-cache add ca-certificates bash openssl git curl wget 
 
-# We don't need the standalone Chromium
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# Use the system Google Chrome installed below instead of Puppeteer's download
+ENV PUPPETEER_SKIP_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
 
 # Install Google Chrome Stable and fonts
 # Note: this installs the necessary libs to make the browser work with Puppeteer.
