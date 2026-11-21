@@ -1,10 +1,13 @@
-name: Release
+name: CI
 
-# Publishes a new version of the npm package and the Docker image used by
-# action.yml on every push to main.
+# build:   runs on every push to main, every pull request, and manual runs.
+# release: runs only on main (push or manual run), after build passes.
+#          Publishes a new version of the npm package and the Docker image
+#          used by action.yml.
 #
 # Skipping: GitHub skips this workflow when the head commit message contains
-# [skip ci] (or [ci skip], [no ci], [skip actions], [actions skip]).
+# [skip ci] (or [ci skip], [no ci], [skip actions], [actions skip]) anywhere,
+# including the commit body.
 #
 # Versioning: if the version in package.json is higher than every version on
 # npm, it is released as-is (bump it manually for minor/major releases).
@@ -14,23 +17,52 @@ name: Release
 on:
   push:
     branches: ["main"]
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write # commit version bump + push tag
-  id-token: write # npm trusted publishing (OIDC) + provenance
-
-concurrency:
-  group: release
-  cancel-in-progress: false
+  contents: read
 
 env:
   PACKAGE_NAME: yaml-resume-builder
   IMAGE_NAME: rubenhak/yaml-resume-builder
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 26
+
+      - name: Install Yarn
+        run: npm install -g yarn@1
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+
+      - name: Build and pack
+        run: |
+          rm -rf build
+          npm pack
+
+  release:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # commit version bump + push tag
+      id-token: write # npm trusted publishing (OIDC) + provenance
+    concurrency:
+      group: release
+      cancel-in-progress: false
     steps:
       - name: Checkout
         uses: actions/checkout@v5

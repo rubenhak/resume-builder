@@ -78,7 +78,7 @@ Output here: https://github.com/rubenhak/resume-builder/blob/main/example/resume
 
 
 ## Releasing
-Every push to `main` publishes a new release to npm and Docker Hub (`rubenhak/yaml-resume-builder`) via the [Release workflow](.github/workflows/release.yml). Add `[skip ci]` to the commit message to skip it.
+Every push to `main` publishes a new release to npm and Docker Hub (`rubenhak/yaml-resume-builder`) via the `release` job of the [CI workflow](.github/workflows/ci.yml). Add `[skip ci]` to the commit message to skip it. GitHub matches it anywhere in the message, including the body, so do not mention it in commit messages otherwise.
 
 Versioning is automatic:
 - If `package.json` holds a version higher than any on npm, that version is released. Bump it manually for minor/major releases.
@@ -87,5 +87,5 @@ Versioning is automatic:
 The workflow then commits the new version in `package.json` and `action.yml` back to `main` (with `[skip ci]`) and tags it `v<version>`.
 
 One-time setup:
-- **npm:** on npmjs.com, add a trusted publisher to the `yaml-resume-builder` package: GitHub Actions, repo `rubenhak/resume-builder`, workflow `release.yml`.
+- **npm:** on npmjs.com, add a trusted publisher to the `yaml-resume-builder` package: GitHub Actions, repo `rubenhak/resume-builder`, workflow `ci.yml`.
 - **Docker Hub:** add repo secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` (a Docker Hub access token with write access).
