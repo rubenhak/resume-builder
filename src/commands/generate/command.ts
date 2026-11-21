@@ -5,6 +5,7 @@ import * as shelljs from 'shelljs';
 import { loadResumeSpec } from '../../loader';
 import { writeFileContents } from '../../file-system';
 import { PathResolver } from '../../path-resolver';
+import { renderMarkdown } from '../../markdown';
 
 const pathResolver = new PathResolver();
 
@@ -19,6 +20,7 @@ export async function executeGenerateHtml(resumePath: string, options: GenerateH
         resume: resumeSpec,
         isStaticOutput: true,
         printable: options.printable,
+        md: renderMarkdown,
     }
 
     const templatePath = Path.join(pathResolver.rootBuildDir, 'src/server/views/pages/index.ejs');

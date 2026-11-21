@@ -34,7 +34,7 @@
 
     <div class="resume-work-description">
         <div class="resume-work-summary">
-            <%= work.summary %>
+            <%- md(work.summary) %>
             <% if (work.shouldShowNewsURL) { %>
                 <a href="<%= work.newsUrl %>" target="_blank" class="visible-link"><%= work.newsUrlText %></a>
             <% } %>
@@ -44,7 +44,7 @@
             <ul class="resume-work-highlights">
                 <% work.highlights.forEach(function(highlight) { %>
                     <li class="resume-highlight">
-                        <%= highlight %>
+                        <%- md(highlight) %>
                     </li>
                 <% }); %>
             </ul>
@@ -55,7 +55,7 @@
                 <% work.projects.forEach(function(project) { %>
                     <li class="resume-project">
                         <div class="resume-highlight">
-                            <%= project.summary %>
+                            <%- md(project.summary) %>
                             <% if (project.shouldShowURL) { %>
                                 <a href="<%= project.url %>" target="_blank" class="visible-link"><%= project.urlText %></a>
                             <% } %>

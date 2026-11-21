@@ -28,14 +28,14 @@
     </div>
 
     <div class="resume-school-study">
-        <%= school.infoText %>
+        <%- md(school.infoText) %>
     </div>
 
     <% if (school.highlights.length > 0) { %>
         <ul class="resume-work-highlights">
             <% school.highlights.forEach(function(highlight) { %>
                 <li class="resume-highlight">
-                    <%= highlight %>
+                    <%- md(highlight) %>
                 </li>
             <% }); %>
         </ul>
